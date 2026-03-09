@@ -161,7 +161,7 @@ function Home() {
                   alt="AI"
                   className="w-6 h-6 group-hover:rotate-12 transition-transform"
                 />
-                <span>Ask AI Tutor</span>
+                <span>Search with AI</span>
                 <FaArrowRight className="text-xs opacity-50 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
