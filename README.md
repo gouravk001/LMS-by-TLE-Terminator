@@ -1,145 +1,278 @@
-# 📚 LMS by TLE Terminator
+# � LMS by TLE Terminator: The Future of Interactive STEM Learning
 
-A full‑stack **Learning Management System (LMS)** built to support teachers and students with structured courses, live lectures, quizzes, community interaction, and intelligent support tools. Designed for scalability, real‑world classroom needs, and future extensibility.
+**Tagline:** *Stop reading about science. Start experiencing it. Explore. Experiment. Dominate.*
 
 ---
 
 ## 🌐 Live Demo
 
 🚀 **Deployed Website:**  
-👉 https://lms-by-tle-terminator.vercel.app
+👉 https://lmsbytle.codes
 
 ---
 
-## 🚀 Overview
+## 🌟 The Vision
 
-LMS by TLE Terminator is a modern web platform that enables:
+Traditional digital education is broken. It relies on passive video lectures, static PDFs, and generic chatbots that don't know the curriculum. **LMS by TLE Terminator changes the game.** 
 
-* Structured course creation & enrollment
-* Recorded and live lectures
-* Quizzes and assessments
-* Community chat & discussion
-* AI‑powered doubt resolution
-* Attention tracking engine
+We have built a comprehensive, gamified, and hyper-intelligent ecosystem that bridges the gap between theoretical studying and hands-on, interactive mastery. We don't just host courses; we track how students feel, let them battle in live quizzes, simulate volatile chemical reactions safely, map out their futures, and give them a 24/7 AI tutor that actually knows their syllabus.
 
-The platform aims to bridge the gap between teaching plans and classroom execution, especially for resource‑constrained or large‑scale education systems.
+**We don't just digitize a textbook; we completely reimagine the educational feedback loop.**
 
 ---
 
-## 🎯 Key Features
+## � Interactive Feature Walkthrough: Step Inside the Platform
+
+### 1. � The Gamified Quiz Arena (The "Hit List")
+
+**Imagine the satisfaction of crossing items off a to-do list, weaponized for learning.**
+
+* **Dynamic Problem Tracking:** We ditched boring exam layouts. As you solve Math or Science problems correctly, the question instantly flashes green, is marked as "Done," and visually slides to the bottom of the list.
+* **Filter by Mastery:** Toggle seamlessly between "Pending" to see your current targets, or "Completed" to bask in your progress.
+* **Rich Media Integration:** Complex problems feature uploaded diagrams and images, rendering flawlessly right inside the question card.
+
+### 2. 🧪 Virtual Experiment Labs
+
+**No lab access? No safety goggles? No problem.**
+
+* **Step-by-Step Simulations:** Step into the digital lab. Execute real-world Physics and Chemistry experiments by checking off sequential safety and execution steps.
+* **Live Variables & Observation Logs:** Track your Independent and Dependent variables in real-time. Use the built-in digital notepad to log your hypotheses and final results securely to the database.
+
+### 3. 🧠 The Context-Aware AI Tutor & Summarizer (RAG-Powered)
+
+**Stuck on a concept at 2:00 AM? Your personal genius is awake.**
+
+* **Syllabus-Specific:** Unlike standard AI, our AWS Bedrock (Llama 3) AI Tutor is powered by Retrieval-Augmented Generation (RAG). It knows your exact lecture notes and PDFs.
+* **Smart Lecture Summarizer:** Don't have time to re-watch a 2-hour lecture? The AI instantly processes audio/video transcripts and generates bite-sized, high-yield summaries and key takeaways on demand.
+* **Mock Interviews & Exams:** Ask the AI to test you! It can dynamically generate multiple-choice questions, full-length practice exams, and conduct simulated interviews based strictly on the course material.
+
+### 4. �️ AI Attention & Stress Engine (Computer Vision)
+
+**Are students actually learning, or are they silently burning out?**
+
+* **Real-Time Webcam Analytics:** During live lectures, our standalone Python/Flask microservice uses OpenCV and MediaPipe to track 468 facial landmarks.
+* **Focus & Stress Metrics:** It calculates head-pose, gaze direction, and facial micro-expressions to generate a real-time "Attention & Stress Score." Educators get a dashboard showing exactly when the class was highly focused, and when they started getting confused.
+
+### 5. ⚔️ Live Multiplayer "Student Arena" (Socket.io)
+
+**Learning meets Esport.**
+
+* **Real-Time Battles:** Enter a room code and join a synchronous, live-streamed quiz hosted by your educator.
+* **Live Leaderboards:** Watch your XP update in real-time as you answer questions faster than your peers.
+* **Class Stats Graph:** After every question, a beautiful animated bar chart reveals how the entire class voted, giving instant feedback on common misconceptions.
+
+### 6. 🗺️ Intelligent Flowchart Studio & 3D Models
+
+**Visualize the invisible.**
+
+* **AI Flowchart Generator:** For Computer Science students, mapping logic can be tedious. Type a prompt, and our AI instantly generates a fully editable, visual flowchart mapped out on a digital whiteboard (tldraw integration).
+* **3D STEM Models:** Interact with high-fidelity, 360-degree manipulatable 3D models to study complex biological cells or physics structures.
+
+### 7. 🧭 AI Career Architect & Smart Scheduler
+
+**Your personal guidance counselor and time-management guru.**
+
+* **Profile-Based Career Path Generator:** The platform analyzes your quiz scores, completed labs, enrolled courses, and overall profile to dynamically map out a personalized career trajectory. It shows you exactly which skills and projects you need to conquer next to land your dream tech role.
+* **AI Timetable Generator:** Say goodbye to procrastination. The AI automatically generates an optimized, personalized study schedule, balancing your coursework, upcoming live classes, and free time to keep you on track without burning out.
+
+### 8. 🏫 The Ultimate LMS Core
+
+**A powerhouse for educators and administrators.**
+
+* **Course & Community Hub:** Full support for free and paid courses (via Razorpay). Students can engage in course-specific WebSocket community chats featuring a Reddit-style upvote/downvote system for the best questions.
+* **Live Video Lectures:** Seamless live streaming integrated with Stream.io SDK.
+* **Educator God-Mode:** Hidden UI modals allow teachers to instantly build labs, upload Cloudinary images, deploy quizzes, and monitor granular student analytics without touching a single line of code.
+
+---
+
+## 🎯 Complete Feature List
 
 ### 👩‍🏫 Course & Lecture Management
 
 * Create and manage courses and curriculum
 * Upload video lectures, audio, and PDF notes
-* Support for free and paid lectures
+* Support for free and paid courses (Razorpay integration)
+* Course-specific community chat with upvote/downvote system
+* Rich media support via Cloudinary CDN
 
 ### 🎥 Live Lecture System
 
-* Real‑time live class support
-* Low‑latency interaction design
-* Extensible to integrate video conferencing tools
+* Real-time live class support with Stream.io SDK
+* Low-latency interaction design
+* Integrated with attention tracking
+* Live quiz arena during lectures
 
-### 👀 Attention Engine
+### 👀 Attention & Stress Engine
 
-* Computer vision–based microservice for analyzing student attentiveness during live lectures  
-* Processes image frames via API in real time  
-* Computes:
-  * Face presence confidence  
-  * Head pose confidence  
-  * Gaze direction confidence  
-* Aggregates signals into an overall attention score per student  
-* Integrates seamlessly with live lecture sessions  
-* Helps instructors monitor engagement and identify attention drops  
-* Designed as an independent, scalable microservice that can be enabled per course
+* Computer vision-based microservice for analyzing student attentiveness
+* Processes webcam frames via API in real time
+* Tracks 468 facial landmarks using MediaPipe
+* Computes face presence, head pose, and gaze direction confidence
+* Generates real-time attention and stress scores
+* Dashboard for educators to monitor engagement
+* Identifies attention drops and confusion moments
 
 ### 📝 Quizzes & Assessments
 
-* Create quizzes per course or lecture
+* Gamified quiz interface with dynamic problem tracking
+* Questions flash green when solved correctly
+* Filter by "Pending" or "Completed" status
+* Rich media integration (diagrams, images)
 * Track student attempts and scores
-* Scalable for objective evaluation
+* Live multiplayer quiz arena with real-time leaderboards
+* Class statistics graphs after each question
+
+### 🧪 STEM Learning Module
+
+* **Virtual Experiment Labs:** Step-by-step Physics and Chemistry simulations
+* **Interactive Quizzes:** STEM-specific assessments
+* **Live Variables Tracking:** Monitor independent and dependent variables
+* **Digital Lab Notebook:** Log hypotheses and results
+* **3D Models:** 360-degree manipulatable models for biology and physics
+* **AI-Powered Doubt Resolution:** Ask any STEM question
+* Separate frontend (Port 3000) and backend services for modularity
 
 ### 💬 Course Community Chat
 
-* Course‑specific discussion channels
-* Real‑time messaging via WebSockets
-* Upvote‑based message relevance and moderation
+* Course-specific discussion channels
+* Real-time messaging via WebSockets (Socket.IO)
+* Reddit-style upvote/downvote system
+* Message relevance and moderation
+* Community engagement tracking
 
-### 🤖 AI Course Tutor
+### 🤖 AI Course Tutor (RAG-Powered)
 
-* Course‑aware AI assistant that answers doubts using lecture context
-* Embedding‑based retrieval from course materials
-* Independent chat history per student
-* Pluggable to local LLMs or API models
+* **Syllabus-Specific Intelligence:** AWS Bedrock (Llama 3) with RAG
+* **Context-Aware Responses:** Knows your exact lecture notes and PDFs
+* **Embedding-Based Retrieval:** Searches through course materials
+* **Independent Chat History:** Per-student conversation tracking
+* **Mock Interviews & Exams:** Dynamically generates practice questions
+* **24/7 Availability:** Always ready to help
 
-### 🧠 AI Summary Generator 
+### 🧠 AI Summary Generator
 
-The **AI Summary Generator** automatically creates **concise, structured summaries per lecture** by processing the **audio of the lecture**.
+* Automatically creates concise, structured summaries per lecture
+* Processes audio/video transcripts
+* Generates bite-sized, high-yield summaries
+* Stores summaries lecture-wise for quick revision
+* Zero manual effort for teachers
 
-- 🎧 Converts lecture audio → text  
-- 🧠 Generates an AI-based summary for that specific lecture  
-- 📌 Stores summaries lecture-wise for quick revision  
+### 🗺️ AI Flowchart Studio
 
-This enables students to revise faster and allows teachers to provide instant, high-quality recap material with zero manual effort.
+* Type a prompt to generate visual flowcharts
+* Fully editable digital whiteboard (tldraw integration)
+* Perfect for Computer Science logic mapping
+* AI-powered diagram generation
 
+### 🧭 AI Career Architect
 
-### 📏 Stem Learning Module
+* Analyzes quiz scores, completed labs, and enrolled courses
+* Dynamically maps personalized career trajectories
+* Shows required skills and projects for dream roles
+* Profile-based recommendations
 
-* Dedicated STEM learning section with interactive quizes and experiments
-* Ask any doubt feature powered by AI
-* Separate frontend and backend services for modularity
+### 📅 AI Smart Scheduler
 
-This module is designed to enhance STEM education by providing interactive content and AI assistance specifically tailored for science, technology, engineering, and mathematics subjects.
+* Automatically generates optimized study schedules
+* Balances coursework, live classes, and free time
+* Prevents burnout with intelligent time management
+* Personalized timetable generation
+
+### 📊 Analytics & Insights
+
+* Granular student analytics for educators
+* Engagement and completion tracking
+* Performance metrics and trends
+* Attention and stress monitoring dashboards
+* Class-wide statistics and insights
 
 ---
 
-## 🏗️ High‑Level Architecture
+## 🛠️ The "Secret Sauce" (Architecture & Tech Stack)
 
-**Frontend**
+We engineered this platform to be **lightning-fast, highly concurrent, and scalable**, deploying it entirely on an **AWS EC2 instance**.
 
-* React (Vite)
-* Tailwind CSS
-* Redux Toolkit
-* Axios
+### The Frontend
+* **React 19 + Vite** - Blazing fast development and build times
+* **Tailwind CSS** - Utility-first styling for premium UI
+* **Framer Motion** - Buttery-smooth animations
+* **Redux Toolkit** - Immaculate state management
+* **Two Separate Frontends:**
+  * Main LMS (Port 5173) - Dashboard, courses, quizzes, analytics
+  * STEM Frontend (Port 3000) - Interactive experiments, 3D models
 
-**Backend**
+### The Backend Engine
+* **Node.js + Express** - Robust server running on port 8000
+* **MongoDB Atlas** - Highly scalable cloud database
+* **Socket.IO** - Bi-directional real-time communication
+* **RESTful APIs** - Clean, organized route structure
+* **Comprehensive Collections:**
+  * Core: Users, Courses, Lectures, Orders, Reviews, Media
+  * Quiz: Quiz, QuizResult, LiveQuizResult
+  * AI: AIEmbedding, AICourseChat, LectureAnalytics
+  * STEM: StemTopic, StemProblem, StemExperiment, StemProgress
+  * Communication: CourseChat, LiveLecture, Flowchart
 
-* Node.js + Express
-* MongoDB (Mongoose)
-* Socket.IO for realtime chat
-* RESTful APIs
+### Real-Time Traffic
+* **Socket.IO** handles:
+  * Course community chat with upvote/downvote
+  * Live Quiz Arena with real-time leaderboards
+  * Real-time messaging and notifications
 
-**AI Layer**
+### The AI Brain
+* **AWS Bedrock (Llama 3)** - Heavy generative lifting:
+  * RAG-powered course tutor
+  * Lecture summaries
+  * Career path mapping
+  * Flowchart generation
+  * Mock interviews and exams
+* **Embedding Storage** - MongoDB for vector search
+* **Context-Aware Retrieval** - Knows your exact syllabus
 
-* PDF text extraction
-* Embedding storage (MongoDB)
-* Contextual response generation
-* Supports pluggable LLM backends
+### The Attention Engine
+* **Python + Flask** - Dedicated microservice (Port 7001)
+* **OpenCV + MediaPipe** - 468 facial landmark tracking
+* **Real-Time CV Processing:**
+  * Face detection (TFLite Model)
+  * Gaze direction analysis
+  * Head pose estimation
+  * Attention score aggregation
+  * Stress level detection
+* **Flow:** Webcam → Engine → Metrics → MongoDB
 
-**Attention Engine**
+### The Gatekeeper
+* **NGINX Reverse Proxy** - Running on AWS EC2
+* **Elegant Routing:**
+  * UI asset requests → Frontend services
+  * API traffic → Backend (Port 8000)
+  * WebSocket traffic → Socket.IO
+  * Attention API → Python microservice (Port 7001)
 
-* Python + Flask
-* OpenCV + MediaPipe
-* Deployed as a separate microservice
-
-**Stem Learning**
-* React + Vite frontend for STEM frontend
-* Node.js + Express backend for STEM learning
-* Dedicated MongoDB collections for STEM courses and progress tracking
-* Deployed as separate frontend and backend services
+### Media & Payments
+* **Cloudinary CDN** - Media storage and delivery
+* **Razorpay** - Payment gateway for paid courses
+* **Stream.io SDK** - Live video streaming
+* **Nodemailer** - Email service
+* **FFmpeg** - Audio/video processing for summaries
 
 ---
 
 ## 📦 Tech Stack Summary
 
-| Layer     | Technology                   |
-| --------- | ---------------------------- |
-| Frontend  | React, Vite, Tailwind, Redux |
-| Backend   | Node.js, Express, Socket.IO  |
-| Database  | MongoDB (Mongoose)           |
-| Realtime  | Socket.IO                    |
-| AI        | Embeddings + LLM (pluggable) |
-| CV Engine | Flask, OpenCV, MediaPipe     |
+| Layer              | Technology                                    |
+| ------------------ | --------------------------------------------- |
+| **Frontend**       | React 19, Vite, Tailwind CSS, Framer Motion, Redux Toolkit |
+| **Backend**        | Node.js, Express 5, Socket.IO                 |
+| **Database**       | MongoDB Atlas (Cloud)                         |
+| **Real-Time**      | Socket.IO (WebSocket)                         |
+| **AI**             | AWS Bedrock (Llama 3), RAG, Embeddings        |
+| **CV Engine**      | Python, Flask, OpenCV, MediaPipe, TFLite      |
+| **Media**          | Cloudinary CDN, FFmpeg                        |
+| **Payments**       | Razorpay                                      |
+| **Live Streaming** | Stream.io SDK                                 |
+| **Proxy**          | NGINX (AWS EC2)                               |
+| **Email**          | Nodemailer                                    |
+| **Deployment**     | AWS EC2, Vercel (Frontend)                    |
 
 ---
 
@@ -232,11 +365,29 @@ Make sure you create `.env` files for backend and frontend as required.
 
 
 ---
+
+## 🏆 The Impact
+
+**LMS by TLE Terminator** doesn't just digitize a textbook; it completely reimagines the educational feedback loop. By combining:
+
+* **Psychological Momentum** - Gamified quizzes and live battles
+* **Psychological Safety** - AI tutors and stress tracking
+* **Tailored Career Guidance** - AI-powered career architect
+* **Hands-On Simulation** - Virtual labs and 3D models
+* **Real-Time Engagement** - Attention tracking and live analytics
+* **Intelligent Scheduling** - AI-powered time management
+
+We are delivering an education platform built exclusively for the **modern achiever**.
+
+---
+
 ## 📈 Scalability & Extensibility
 
-* Microservice‑friendly architecture — AI layer and Attention Engine scale independently
-* Designed to support thousands of users and multiple institutions
-* Suitable for state/district‑level deployments with additional engineering for multi‑tenant isolation, monitoring, and autoscaling
+* **Microservice-Friendly Architecture** - AI layer and Attention Engine scale independently
+* **Designed for Thousands** - Supports multiple institutions and users
+* **Production-Ready** - Clear path to multi-tenant isolation, monitoring, and autoscaling
+* **Suitable for State/District-Level Deployments** - Enterprise-grade architecture
+* **Modular Design** - Easy to add new features and integrations
 
 ---
 
@@ -260,12 +411,17 @@ Built by **TLE Terminator** — focused on impact, usability, and system‑level
 ## 📌 Future Enhancements
 
 * Teacher analytics dashboard (engagement, completion, performance)
-* Offline‑first mobile app
-* Parent & mentor views
+* Offline-first mobile app (iOS & Android)
+* Parent & mentor views with progress tracking
 * Automated attendance & engagement insights
 * Integration with government education systems
-* Duals for Quiz assessments
-* Gamification of Quiz elements 
+* Duels for Quiz assessments (1v1 battles)
+* Advanced gamification elements (badges, achievements, XP system)
+* Multi-language support for global reach
+* Advanced proctoring features for online exams
+* Integration with popular LMS standards (SCORM, xAPI)
+* Blockchain-based certification system
+* AR/VR integration for immersive learning experiences 
 
 ---
 
